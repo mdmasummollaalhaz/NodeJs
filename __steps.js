@@ -16,4 +16,5 @@
  * 5. listen to port
  * 6. node index.js
  * 7. check the browser for that port
+ * 8. npm install cors
  */
