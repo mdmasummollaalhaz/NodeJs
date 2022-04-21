@@ -4,6 +4,7 @@ const app = express();
 const port = 6001;
 
 app.use(cors());
+app.use(express.json())
 
 app.get('/', (req, res) => {
     res.send('Hello word! ')
@@ -27,6 +28,11 @@ app.get('/user/:id', (req, res) =>{
     // const user = users[id];
     const user = users.find(u => u.id === id);
     res.send(user)
+});
+
+app.post('/user' , (req, res) =>{
+    console.log('Request', req.body);
+    res.send('post method scussess')
 })
 
 app.listen(port, () =>{
